@@ -29,6 +29,7 @@ import {
 
 const Section: React.FC<{
   title: string;
+  children: any;
 }> = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
