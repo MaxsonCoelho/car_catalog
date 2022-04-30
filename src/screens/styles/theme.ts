@@ -1,5 +1,6 @@
 export default {
-  header: '#1B1B1F',
+  colors: {
+    header: '#1B1B1F',
   background_primary: '#F4F5F6',
   background_secondary: '#FFFFFF',
 
@@ -15,4 +16,12 @@ export default {
 
   shape: '#E1E1E8',
   shape_dark: '#29292E',
+  },
+  fonts: {
+    primary_Regular: 'Inter-Regular',
+    primary_Medium: 'Inter-Medium',
+    secondary_Regular: 'Archivo-Regular',
+    secondary_Medium: 'Archivo-Medium',
+    secondary_SemiBold: 'Archivo-SemiBold'
+  }
 };
