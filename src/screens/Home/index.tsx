@@ -3,8 +3,20 @@ import { StatusBar } from 'react-native';
 import { Container, Header, TotalCars, HeaderContent } from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Logo from '../../assets/img/logo.svg';
+import Car from '../../components/Car';
 
 export default function Home() {
+
+  const carData = {
+    brand: 'Audi',
+    name: 'RS 5 Coupé',
+    rent: {
+        period: 'AO DIA',
+        price: '120',
+    },
+    thumbnail: 'https://www.pngmart.com/files/10/White-Audi-PNG-Transparent-Image.png',
+  }
+
   return (
     <Container>
       <StatusBar 
@@ -21,6 +33,8 @@ export default function Home() {
           <TotalCars>Total de 12 carros</TotalCars>
         </HeaderContent>
       </Header>
+      <Car data={carData} />
+      <Car data={carData} />
     </Container>
   );
 }
