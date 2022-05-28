@@ -83,9 +83,21 @@ export const About = styled.Text`
     line-height: ${RFValue(25)}px;
 `;
 
+export const Acessories = styled.View`
+    width: 100%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 23px;
+`;
+
 export const Footer = styled.View`
     width: 100%;
     backgrond-color: ${({ theme }) => theme.colors.background_secondary};
 
     padding: 24px 24px ${getBottomSpace() + 24}px;
 `;
+

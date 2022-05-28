@@ -1,7 +1,15 @@
 import React from 'react';
+import Acessory from '../../components/Acessory';
 import BackButton from '../../components/BackButon';
 import Button from '../../components/Button';
 import ImageSlider from '../../components/ImageSlider';
+
+import speedSvg from '../../assets/img/speed.svg';
+import accelerationSvg from '../../assets/img/acceleration.svg';
+import forceSvg from '../../assets/img/force.svg';
+import gasolineSvg from '../../assets/img/gasoline.svg';
+import exchangeSvg from '../../assets/img/exchange.svg';
+import peopleSvg from '../../assets/img/people.svg';
 
 import { 
   Container, 
@@ -16,6 +24,7 @@ import {
   Period,
   Price,
   About,
+  Acessories,
   Footer
 } from './styles';
 
@@ -43,6 +52,15 @@ export default function CarDetails() {
               <Price>R$ 580</Price>
             </Rent>
           </Details>
+
+          <Acessories>
+            <Acessory name='380Km/h' icon={speedSvg} />
+            <Acessory name='3.2s' icon={accelerationSvg} />
+            <Acessory name='800 HP' icon={forceSvg} />
+            <Acessory name='Gasolina' icon={gasolineSvg} />
+            <Acessory name='Auto' icon={exchangeSvg} />
+            <Acessory name='2 pessoas' icon={peopleSvg} />
+          </Acessories>
 
           <About>
             Este é o automóvel desportivo. Surgiu do lendário
