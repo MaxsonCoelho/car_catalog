@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './src/screens/styles/theme';
 import { ActivityIndicator, View } from 'react-native';
 import Home from './src/screens/Home';
+import CarDetails from './src/CarDetails';
 
 
 export default function App() {
@@ -16,7 +17,8 @@ export default function App() {
 
   return !loading ? 
     <ThemeProvider theme={theme}>
-      <Home /> 
+      {/* <Home />  */}
+      <CarDetails />
     </ThemeProvider>
   : 
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
