@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './src/screens/styles/theme';
 import { ActivityIndicator, View } from 'react-native';
 import Home from './src/screens/Home';
-import CarDetails from './src/CarDetails';
+import CarDetails from './src/screens/CarDetails';
 
 
 export default function App() {
