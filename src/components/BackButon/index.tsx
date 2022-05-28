@@ -16,7 +16,7 @@ export default function BackButton({ color, ...rest }: Props) {
     <Container {...rest}>
         <Icon 
           name='chevron-left' 
-          size={24} 
+          size={20} 
           color={color ? color : theme.colors.text} 
         />
     </Container>

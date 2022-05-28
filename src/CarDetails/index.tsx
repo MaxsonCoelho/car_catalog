@@ -1,7 +1,20 @@
 import React from 'react';
 import BackButton from '../components/BackButon';
+import ImageSlider from '../components/ImageSlider';
 
-import { Container, Header } from './styles';
+import { 
+  Container, 
+  Header, 
+  CarImages,
+  Content,
+  Details,
+  Description,
+  Brand,
+  Name,
+  Rent,
+  Period,
+  Price,
+} from './styles';
 
 
 export default function CarDetails() {
@@ -10,6 +23,24 @@ export default function CarDetails() {
         <Header>
           <BackButton />
         </Header>
+
+        <CarImages>
+          <ImageSlider imagesUrl={['https://www.pngmart.com/files/10/White-Audi-PNG-Transparent-Image.png']} />
+        </CarImages>
+
+        <Content>
+          <Details>
+            <Description>
+              <Brand>Audi</Brand>
+              <Name>A4</Name>
+            </Description>
+
+            <Rent>
+              <Period>Ao dia</Period>
+              <Price>R$ 580</Price>
+            </Rent>
+          </Details>
+        </Content>
     </Container>
   );
 }
