@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from './src/screens/styles/theme';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, View, StatusBar } from 'react-native';
 import Home from './src/screens/Home';
 import CarDetails from './src/screens/CarDetails';
+import { Scheduling } from './src/screens/Scheduling';
 
 
 export default function App() {
@@ -17,8 +18,13 @@ export default function App() {
 
   return !loading ? 
     <ThemeProvider theme={theme}>
+      <StatusBar
+        barStyle='light-content'
+        translucent
+        backgroundColor='transparent'
+      />
       {/* <Home />  */}
-      <CarDetails />
+      <Scheduling />
     </ThemeProvider>
   : 
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
