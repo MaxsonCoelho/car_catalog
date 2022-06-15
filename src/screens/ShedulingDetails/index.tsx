@@ -1,4 +1,7 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Feather';
+import { RFValue } from 'react-native-responsive-fontsize';
+
 import Acessory from '../../components/Acessory';
 import BackButton from '../../components/BackButon';
 import Button from '../../components/Button';
@@ -10,6 +13,8 @@ import forceSvg from '../../assets/img/force.svg';
 import gasolineSvg from '../../assets/img/gasoline.svg';
 import exchangeSvg from '../../assets/img/exchange.svg';
 import peopleSvg from '../../assets/img/people.svg';
+
+import { useTheme } from 'styled-components';
 
 import { 
   Container, 
@@ -23,13 +28,27 @@ import {
   Rent,
   Period,
   Price,
-  About,
   Acessories,
-  Footer
+  Footer,
+  RentalPeriod,
+  CalendarIcon,
+  DateInfo,
+  DateTitle,
+  DateValue,
+  RentalPrice,
+  RentalPriceLabel,
+  RentalPriceDetails,
+  RentalPriceQuota,
+  RentalPriceTotal
 } from './styles';
 
 
-export default function CarDetails() {
+
+
+export default function SchedulingDetails() {
+
+  const theme = useTheme();
+
   return (
     <Container>
         <Header>
@@ -62,15 +81,45 @@ export default function CarDetails() {
             <Acessory name='2 pessoas' icon={peopleSvg} />
           </Acessories>
 
-          <About>
-            Este é o automóvel desportivo. Surgiu do lendário
-            touro de lide indultado na praça Real Maestranza se Sevilla.
-          </About>
+          <RentalPeriod>
+            <CalendarIcon>
+              <Icon 
+                name="calendar"
+                size={RFValue(24)}
+                color={theme.colors.shape}
+              />
+            </CalendarIcon>
+            <DateInfo>
+              <DateTitle>DE</DateTitle>
+              <DateValue>18/06/2021</DateValue>
+            </DateInfo>
+
+            <CalendarIcon>
+              <Icon 
+                name="chevron-right"
+                size={RFValue(10)}
+                color={theme.colors.shape}
+              />
+            </CalendarIcon>
+            <DateInfo>
+              <DateTitle>DE</DateTitle>
+              <DateValue>18/06/2021</DateValue>
+            </DateInfo>
+
+          </RentalPeriod>
+          <RentalPrice>
+            <RentalPriceLabel>TOTAL</RentalPriceLabel>
+            <RentalPriceDetails>
+              <RentalPriceQuota>R$ 580 x3 diárias</RentalPriceQuota>
+              <RentalPriceTotal>R$ 2.900</RentalPriceTotal>
+            </RentalPriceDetails>
+          </RentalPrice>
         </Content>
 
         <Footer>
           <Button title="Confirmar" />
         </Footer>
+
     </Container>
   );
 }

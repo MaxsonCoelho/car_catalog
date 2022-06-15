@@ -6,6 +6,8 @@ import { ActivityIndicator, View, StatusBar } from 'react-native';
 import Home from './src/screens/Home';
 import CarDetails from './src/screens/CarDetails';
 import { Scheduling } from './src/screens/Scheduling';
+import SchedulingDetails from './src/screens/ShedulingDetails';
+import { ShedulingComplete } from './src/screens/ShedulingComplete';
 
 
 export default function App() {
@@ -23,8 +25,7 @@ export default function App() {
         translucent
         backgroundColor='transparent'
       />
-      {/* <Home />  */}
-      <Scheduling />
+      <ShedulingComplete />
     </ThemeProvider>
   : 
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
