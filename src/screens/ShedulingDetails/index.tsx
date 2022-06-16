@@ -14,6 +14,8 @@ import gasolineSvg from '../../assets/img/gasoline.svg';
 import exchangeSvg from '../../assets/img/exchange.svg';
 import peopleSvg from '../../assets/img/people.svg';
 
+import { useNavigation } from '@react-navigation/native';
+
 import { useTheme } from 'styled-components';
 
 import { 
@@ -43,11 +45,14 @@ import {
 } from './styles';
 
 
-
-
 export function SchedulingDetails() {
 
+  const navigation = useNavigation();
   const theme = useTheme();
+
+  function handleConfirmRental() {
+    navigation.navigate('ShedulingComplete');
+  }
 
   return (
     <Container>
@@ -117,7 +122,11 @@ export function SchedulingDetails() {
         </Content>
 
         <Footer>
-          <Button title="Confirmar" />
+          <Button 
+            title="Alugar agora" 
+            color={theme.colors.success}
+            onPress={handleConfirmRental} 
+          />
         </Footer>
 
     </Container>
