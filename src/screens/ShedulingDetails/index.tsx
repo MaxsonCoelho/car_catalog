@@ -45,7 +45,7 @@ import {
 
 
 
-export default function SchedulingDetails() {
+export function SchedulingDetails() {
 
   const theme = useTheme();
 

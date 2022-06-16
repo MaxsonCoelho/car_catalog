@@ -1,5 +1,5 @@
 import React from 'react';
-import { useWindowDimensions } from 'react-native';
+import { StatusBar, useWindowDimensions } from 'react-native';
 
 import LogoSvg from '../../assets/img/logo_background_gray.svg';
 import DoneSvg from '../../assets/img/done.svg';

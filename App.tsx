@@ -3,11 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from './src/screens/styles/theme';
 import { ActivityIndicator, View, StatusBar } from 'react-native';
-import Home from './src/screens/Home';
-import CarDetails from './src/screens/CarDetails';
-import { Scheduling } from './src/screens/Scheduling';
-import SchedulingDetails from './src/screens/ShedulingDetails';
-import { ShedulingComplete } from './src/screens/ShedulingComplete';
+import { Routes } from './src/routes';
 
 
 export default function App() {
@@ -25,7 +21,7 @@ export default function App() {
         translucent
         backgroundColor='transparent'
       />
-      <ShedulingComplete />
+      <Routes />
     </ThemeProvider>
   : 
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

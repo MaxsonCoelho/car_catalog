@@ -29,7 +29,7 @@ import {
 } from './styles';
 
 
-export default function CarDetails() {
+export function CarDetails() {
   return (
     <Container>
         <Header>

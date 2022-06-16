@@ -5,7 +5,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import Logo from '../../assets/img/logo.svg';
 import Car from '../../components/Car';
 
-export default function Home() {
+export function Home() {
 
   const carData = {
     brand: 'Audi',
