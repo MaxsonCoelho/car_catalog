@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
 import { Container, Header, TotalCars, HeaderContent, CarList } from './styles';
 import { RFValue } from 'react-native-responsive-fontsize';
 import Logo from '../../assets/img/logo.svg';
 import Car from '../../components/Car';
+
+import api from '../../services/api';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -24,6 +26,19 @@ export function Home() {
   function handleCarDetails() {
     navigation.navigate('CarDetails');
   }
+
+  useEffect(() => {
+    async function fetchCars() {
+      try{
+        const response = await api.get('/cars')
+        console.log(response.data)
+      }
+      catch(e) {
+        console.log(e);
+      }
+    }
+    fetchCars();
+  }, [])
 
   return (
     <Container>

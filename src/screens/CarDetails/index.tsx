@@ -37,7 +37,6 @@ export function CarDetails() {
 
   function handleScheduling() {
     navigation.navigate('Scheduling');
-    
   }
 
 
