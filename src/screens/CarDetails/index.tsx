@@ -4,12 +4,7 @@ import BackButton from '../../components/BackButon';
 import Button from '../../components/Button';
 import ImageSlider from '../../components/ImageSlider';
 
-import speedSvg from '../../assets/img/speed.svg';
-import accelerationSvg from '../../assets/img/acceleration.svg';
-import forceSvg from '../../assets/img/force.svg';
-import gasolineSvg from '../../assets/img/gasoline.svg';
-import exchangeSvg from '../../assets/img/exchange.svg';
-import peopleSvg from '../../assets/img/people.svg';
+import { getAccessoryIcon } from '../../utils/getAccessoryIcon';
 
 import { CarDTO } from '../../dtos/carDTO';
 
@@ -81,7 +76,7 @@ export function CarDetails() {
                 <Acessory 
                   key={accessory.type}
                   name={accessory.name} 
-                  icon={speedSvg} 
+                  icon={getAccessoryIcon(accessory.type)} 
                 />
               ))
             }
