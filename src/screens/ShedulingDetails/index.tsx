@@ -54,10 +54,14 @@ export function SchedulingDetails() {
     navigation.navigate('ShedulingComplete');
   }
 
+  function handleBack() {
+    navigation.goBack();
+  }
+
   return (
     <Container>
         <Header>
-          <BackButton />
+          <BackButton onPress={handleBack} />
         </Header>
 
         <CarImages>

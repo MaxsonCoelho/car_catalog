@@ -1,0 +1,5 @@
+rodar simulador do servidor na pasta do projeto
+json-server --watch ./src/services/server.json --host 192.168.0.2 --port 3333 --delay 700
+
+novo terminal, yarn start
+novo terminal, npx react-native run-android
