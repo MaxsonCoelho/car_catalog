@@ -17,16 +17,6 @@ export function Home() {
 
   const navigation = useNavigation();
 
-  const carData = {
-    brand: 'Audi',
-    name: 'RS 5 Coupé',
-    rent: {
-        period: 'AO DIA',
-        price: '120',
-    },
-    thumbnail: 'https://www.pngmart.com/files/10/White-Audi-PNG-Transparent-Image.png',
-  }
-
   function handleCarDetails(car: CarDTO) {
     navigation.navigate('CarDetails', { car });
   }
@@ -59,7 +49,7 @@ export function Home() {
             width={RFValue(108)}
             height={RFValue(12)}
           />
-          <TotalCars>Total de 12 carros</TotalCars>
+          <TotalCars>Total de {cars.length} carros</TotalCars>
         </HeaderContent>
       </Header>
       {loading ? <Load /> :
