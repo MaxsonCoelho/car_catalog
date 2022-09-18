@@ -7,7 +7,10 @@ import { getPlatformDate } from "../../utils/getPlataformDate";
 export function generateInterval(start: DayProps, end: DayProps) {
     let interval: MarkedDateProps = {};
 
-    eachDayOfInterval({  start: new Date(start.timestamp), end: new Date(end.timestamp) })
+    eachDayOfInterval(
+        {  start: new Date(start.year, start.month - 1, start.day), 
+            end: new Date(end.year, end.month - 1, end.day) }
+        )
     .forEach((item) => {
         const date = format(getPlatformDate(item), 'yyyy-MM-dd');
 
