@@ -34,7 +34,7 @@ interface RentalPeriod {
 
 interface Params {
     car: CarDTO;
-  }
+}
 
 
 export function Scheduling(){
@@ -53,7 +53,8 @@ export function Scheduling(){
         }else {
             navigation.navigate('SchedulingDetails', {
                 car,
-                dates: Object.keys(markedDates)
+                dates: Object.keys(markedDates),
+                rentalPeriod: rentalPeriod
             });
         }
     }
