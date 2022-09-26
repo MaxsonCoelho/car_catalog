@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import BackButton from '../../components/BackButon';
 import Button from '../../components/Button';
@@ -41,6 +41,7 @@ export function Scheduling(){
     const [lastSelectedDate, setLastSelectedDate] = useState<DayProps>({} as DayPros);
     const [markedDates, setMarkedDates] = useState<MarkedDateProps>({} as MarkedDateProps);
     const [rentalPeriod, setRentalPeriod] = useState<RentalPeriod>({} as RentalPeriod);
+    const [disabled, setDisabled] = useState(false);
 
     const navigation = useNavigation();
     const route = useRoute();
@@ -48,8 +49,10 @@ export function Scheduling(){
     const theme = useTheme();
 
     function handleSchedulingDetails() {
+        
         if(!rentalPeriod.startFormatted || !rentalPeriod.endFormatted){
-            Alert.alert('Selecione pelo menos um dia para alugar.');
+            Alert.alert('Informações', 'Escolha pelo menos uma data para continuar.')
+            return
         }else {
             navigation.navigate('SchedulingDetails', {
                 car,
@@ -92,6 +95,14 @@ export function Scheduling(){
         })
     }
 
+    useEffect(() => {
+        if(!!rentalPeriod.startFormatted){
+            setDisabled(false);
+        }else {
+            setDisabled(true);
+        }
+    }, [rentalPeriod.endFormatted])
+
     return (
         <Container>
             <Header>
@@ -130,7 +141,11 @@ export function Scheduling(){
             </Content>
 
             <Footer>
-                <Button title='Confirmar' onPress={handleSchedulingDetails} />
+                <Button 
+                    title='Confirmar' 
+                    onPress={handleSchedulingDetails}
+                    disabled={disabled}
+                 />
             </Footer>
         </Container>
     );
