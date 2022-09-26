@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { RFValue } from 'react-native-responsive-fontsize';
 
@@ -39,7 +40,6 @@ import {
   RentalPriceQuota,
   RentalPriceTotal
 } from './styles';
-import { Alert } from 'react-native';
 
 
 interface Params {
@@ -74,7 +74,9 @@ export function SchedulingDetails() {
 
     await api.post('schedules_byuser', {
       user_id: 1,
-      car
+      car,
+      start_formated: rentalPeriod.startFormatted,
+      end_formated: rentalPeriod.endFormatted 
     })
 
     api.put(`/schedules_bycars/${car.id}`, {
