@@ -28,7 +28,7 @@ export const Content = styled.ScrollView.attrs({
         padding: 24,
         alignItems: 'center',
     },
-    showVerticalScrollIndicator: false
+    showsVerticalScrollIndicator: false
 })``;
 
 export const Details = styled.View`

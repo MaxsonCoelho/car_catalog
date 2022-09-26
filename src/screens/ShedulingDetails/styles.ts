@@ -28,7 +28,7 @@ export const Content = styled.ScrollView.attrs({
         padding: 24,
         alignItems: 'center',
     },
-    showVerticalScrollIndicator: false
+    showsVerticalScrollIndicator: false
 })``;
 
 export const Details = styled.View`
@@ -38,7 +38,7 @@ export const Details = styled.View`
     align-items: center;
     justify-content: space-between;
 
-    margin-top: 38px
+    margin-top: 5px
 `;
 
 export const Description = styled.View`
@@ -81,7 +81,7 @@ export const Accessories = styled.View`
     align-items: center;
     justify-content: space-between;
 
-    margin-top: 23px;
+    margin-top: 5px;
 `;
 
 export const Footer = styled.View`
@@ -101,7 +101,7 @@ export const RentalPeriod = styled.View`
     border-bottom-width: 1px;
     border-bottom-color: ${({ theme }) => theme.colors.line};
     
-    margin-top: 40px;
+    margin-top: 10px;
     padding-bottom: 16px;
 `;
 
