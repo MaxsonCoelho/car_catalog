@@ -72,8 +72,7 @@ export function MyCars() {
         />
 
         <Title>
-            Escolha uma {'\n'} data de início{'\n'}
-            e fim do aluguel
+            Meus carros alugados.
         </Title>
 
         <SubTitle>
